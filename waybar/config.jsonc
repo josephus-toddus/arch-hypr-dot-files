@@ -1,0 +1,85 @@
+{
+    "position": "center",
+    "modules-left": [
+        "clock",
+        "cpu",
+        "custom/gpu"
+    ],
+    "modules-center": [
+        "hyprland/workspaces"
+    ],
+    "modules-right": [
+        "memory",
+        "pulseaudio", 
+        "network", 
+        "battery"
+    ],
+    "sway/window": {
+        "max-length": 50
+    },
+    "battery": {
+        "format": "{capacity}% {icon}",
+        "format-icons": ["", "", "", "", ""],
+        "states": {
+            "full": 80,
+            "good": 79,
+            "warning": 30,
+            "critical": 15
+        }
+    },
+    "clock": {
+        "interval": 1,
+        "format": "{:%H:%M:%S}",
+        "format-alt": "{:%a, %d. %b  %H:%M:%S}"
+    },
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-muted": "   Muted",
+        "scroll-step": 5, // Percent change per scroll wheel click
+        "on-click": "pavucontrol", // Opens full visual control on click
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        }
+    },
+    "network": {
+        "interface": "wlp3s0",
+        "format": "{ifname}",
+        "format-wifi": "",
+        "format-ethernet": "{ifname} ",
+        "format-disconnected": "", //An empty format will hide the module.
+        "tooltip-format": "{ifname}",
+        "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
+        "tooltip-format-ethernet": "{ifname} ",
+        "tooltip-format-disconnected": "Disconnected",
+        "max-length": 50
+    },
+    "hyprland/workspaces": {
+        "format": "{name}",
+        "workspaces": {
+
+        }
+    },
+    "memory": {
+        "interval": 1,
+        "format": "RAM {used:0.01f}G / {total:0.01f}G",
+        "tooltip-format": "{percentage}% used"
+    },
+    "cpu": {
+        "interval": 1,
+        "format": "CPU {usage}%",
+        "max-length": 10
+    },
+    "custom/gpu": {
+        "exec": "cat /sys/class/hwmon/hwmon*/device/gpu_busy_percent 2>/dev/null || echo 0",
+        "format": "GPU {}%",
+        "return-type": "",
+        "interval": 1
+    }
+
+}

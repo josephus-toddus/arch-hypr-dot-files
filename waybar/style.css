@@ -1,0 +1,127 @@
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 11px;
+    min-height: 0;
+    margin: 0;
+    padding: 0;
+
+    padding-top: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+window#waybar {
+    background: transparent;
+    color: white;
+}
+
+tooltip {
+  background: rgba(43, 48, 59, 0.5);
+  border: 1px solid rgba(100, 114, 125, 0.5);
+}
+tooltip label {
+  color: white;
+}
+
+#workspaces button {
+    padding:  0 5px;
+    background: black;
+    color: white;
+    border-radius: 30px;
+    margin: 0 5px;
+    transition: all 350ms ease-in-out;
+    border: 1px solid aquamarine;
+    min-width: 20px;
+}
+
+#workspaces button.active {
+    color: black;
+    background-color: aquamarine;
+    min-width: 50px;
+}
+
+#workspaces button:focus {
+    box-shadow: none;
+    text-shadow: none;
+    border: 1px solid aquamarine;
+    outline: none;
+    min-width: 50px;
+}
+
+#mode {
+    background: #64727D;
+    border-bottom: 3px solid white;
+}
+
+#clock {
+    background: transparent;
+    margin: 0 10px;
+}
+
+#battery {
+    background-color: #ffffff;
+    color: black;
+    border-radius: 7px;
+    margin-left: 10px;
+    margin-right: 3px;
+
+    padding-top: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+
+    min-width: 70px;
+}
+
+#battery.full {
+    background-color: rgb(132, 255, 132);
+}
+
+#battery.good {
+    background-color: white;
+}
+
+#battery.warning {
+    background-color: rgb(255, 246, 81);
+}
+
+#battery.critical {
+    background-color: rgb(255, 25, 25);
+}
+
+#network {
+    margin: 0 10px;
+}
+
+#pulseaudio {
+    margin: 0 10px;
+}
+
+#memory {
+    margin: 0 10px;
+    background-color: black;
+    color: white;
+    border: 1px solid aquamarine;
+    border-radius: 7px;
+    min-width: 130px;
+}
+
+#cpu {
+    margin-right: 10px;
+    margin-left: 40px;
+    background-color: black;
+    color: white;
+    border: 1px solid aquamarine;
+    border-radius: 7px;
+    min-width: 70px;
+}
+
+#custom-gpu {
+    margin: 0 10px;
+    background-color: black;
+    color: white;
+    border: 1px solid aquamarine;
+    border-radius: 7px;
+    min-width: 70px;
+}
